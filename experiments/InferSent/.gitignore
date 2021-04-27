@@ -1,0 +1,10 @@
+dataset/GloVe
+dataset/MultiNLI
+dataset/SNLI
+encoder/infersent.allnli.pickle
+
+*.swp
+
+saved*
+__pycache__
+xp
