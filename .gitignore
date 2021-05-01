@@ -105,3 +105,6 @@ xp/
 
 # Saved models
 *.pkl
+
+# dataset
+cifar-10-python.tar.gz
