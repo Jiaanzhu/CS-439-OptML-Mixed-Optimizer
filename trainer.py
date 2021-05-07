@@ -103,10 +103,10 @@ def test(model, testloader):
         labels = labels.to(device)
         pred = predict(model, inputs)
         correct += (pred == labels).sum()
-    return 100 * correct / len(testloader)
+    return 100 * correct / testloader.numel()
 
 
-def train(model, trainloader, valloader, criterion, optimizer, n_epochs=2, interval=1000, device=device):
+def train(model, trainloader, valloader, criterion, optimizer, n_epochs=2, interval=5000, device=device):
     val_loss = []
     val_acc = []
     for t in range(n_epochs):
@@ -123,6 +123,8 @@ def train(model, trainloader, valloader, criterion, optimizer, n_epochs=2, inter
             if not i % interval:
                 print(t, i, loss.item())
                 acc = test(model, valloader)
+                val_acc.append(acc)
+                val_loss.append(loss.item())
                 print('Accuracy: %.2f %%' % acc)
     return val_acc, val_loss
 
@@ -152,8 +154,8 @@ def Trainer(batch_size,
     trainloader = torch.utils.data.DataLoader(trainset, batch_size=batch_size, shuffle=True)
     valloader = torch.utils.data.DataLoader(trainset, batch_size=batch_size, shuffle=True)
     testloader = torch.utils.data.DataLoader(testset, batch_size=batch_size, shuffle=False)
-    val_acc, val_loss = train(model, trainloader, valloader, criterion, optimizer, n_epochs=EPOCHS, interval=1000, device=device)
+    val_acc, val_loss = train(model, trainloader, valloader, criterion, optimizer, n_epochs=EPOCHS, interval=5000, device=device)
     val_accuracies.append(val_acc)
     val_losses.append(val_loss)
 
- trainings = [Trainer(128), Trainer(50)]
+trainings = [Trainer(128), Trainer(50)]
