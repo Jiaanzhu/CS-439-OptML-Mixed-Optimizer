@@ -11,24 +11,22 @@ This project requires **Python** and the following Python libraries installed:
 - tqdm
 - pytorch_model_summary
 - jupyter
+- typing
 
 
 ### Code
 
 - MAS_variants.ipynb: notebook with Mixed Adam and SGD applied on all layers
-- Test_SGD.ipynb: notebook with Adam and SGD applied on different layers
-- conv.py: 
-- models.py
-- trainer.py
-- datasets.py
-- requirements.txt
+- run.py: scripts to obtain results for optimizer with Adam and SGD applied on different layers
+- requirements.txt: library needed
 - report.pdf: the report in which we explain and share our results
+- figures: folder with figures plotted, and appearing in the report
 
 ### Run
 
 In a terminal or command window, navigate to the top-level project directory `ee559DL_project1` (that contains this README) and run one of the following commands:
 ```
-jupyter notebook Test_SGD.ipynb
+python3 run.py
 jupyter notebook MAS_variants.ipynb
 ```  
 

@@ -1,7 +1,7 @@
-tqdm
-torch>=1.0
-torchvision>=0.2
-matplotlib
+torch
 numpy
+tqdm
+matplotlib
+torchvision
+typing
 pytorch_model_summary
-
