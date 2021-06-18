@@ -22,6 +22,7 @@ This project requires **Python** and the following Python libraries installed:
 - trainer.py
 - datasets.py
 - requirements.txt
+- report.pdf: the report in which we explain and share our results
 
 ### Run
 
