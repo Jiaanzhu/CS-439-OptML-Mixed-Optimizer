@@ -1,5 +1,5 @@
 # OptML Project
-We wish to try multiple ways of combining SGD and Adam in order to obtain properties of both.
+In this project we try multiple ways of combining SGD and Adam in order to obtain properties of both.
 
 ### Install
 
