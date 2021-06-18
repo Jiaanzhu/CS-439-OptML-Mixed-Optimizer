@@ -3,4 +3,4 @@ nltk
 torchvision>=0.2
 torch>=1.0
 tqdm
-mlogger
+pytorch_model_summary
