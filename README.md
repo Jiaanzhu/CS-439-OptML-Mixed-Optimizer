@@ -16,20 +16,29 @@ This project requires **Python** and the following Python libraries installed:
 
 ### Code
 
-- MAS_variants.ipynb: notebook with Mixed Adam and SGD applied on all layers
-- run.py: scripts to obtain results for optimizer with Adam and SGD applied on different layers
+- section-4a: 
+	- run.py: scripts to obtain results for optimizer with Adam and SGD applied on different layers
+	- figures: figures plotted by run.py and found in report.pdf
+- section-4b: 
+	- MAS_variants.ipynb: notebook with Mixed Adam and SGD applied on all layers
+	- figures: figures plotted in MAS_variants.ipynb and found in report.pdf
+
 - requirements.txt: library needed
 - report.pdf: the report in which we explain and share our results
-- figures: folder with figures plotted, and appearing in the report
 
 ### Run
 
-In a terminal or command window, navigate to the top-level project directory `ee559DL_project1` (that contains this README) and run one of the following commands:
+To obtain 'mixing of optimizers in different layers' plots
 ```
+cd section-4a
 python3 run.py
-jupyter notebook MAS_variants.ipynb
 ```  
 
+To obtain 'mixing of optimizers within same layer' plots
+```
+cd section-4b
+jupyter notebook MAS_variants.ipynb
+```
 
 ### Data
 
