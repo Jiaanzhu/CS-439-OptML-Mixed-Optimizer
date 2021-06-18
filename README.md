@@ -15,9 +15,13 @@ This project requires **Python** and the following Python libraries installed:
 
 ### Code
 
-In this github you will find:
-
-
+- MAS_variants.ipynb: notebook with Mixed Adam and SGD applied on all layers
+- Test_SGD.ipynb: notebook with Adam and SGD applied on different layers
+- conv.py: 
+- models.py
+- trainer.py
+- datasets.py
+- requirements.txt
 
 ### Run
 
